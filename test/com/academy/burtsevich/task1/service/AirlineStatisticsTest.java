@@ -1,10 +1,13 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.service;
 
+import com.academy.burtsevich.task1.aircrafts.Aircraft;
+import com.academy.burtsevich.task1.aircrafts.Airplane;
+import com.academy.burtsevich.task1.aircrafts.Helicopter;
+import com.academy.burtsevich.task1.airline.Airline;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,18 +21,18 @@ class AirlineStatisticsTest {
             new Helicopter(5, 6, 7, 8, "h2", 5)
     ));
 
-    AirlineStatistics statistics = new AirlineStatistics(airline);
+    AirlineStatistics statistics = new AirlineStatistics();
 
     @Test
     void getTotalCapacity() {
         airline.setAirFleet(airFleet);
-        assertEquals(statistics.getTotalCapacity(), 15);
+        assertEquals(statistics.getTotalCapacity(airline), 15);
     }
 
     @Test
     void getTotalLoadCapacity() {
         airline.setAirFleet(airFleet);
-        assertEquals(statistics.getTotalLoadCapacity(), 20);
+        assertEquals(statistics.getTotalLoadCapacity(airline), 20);
     }
 
     @Test
@@ -40,6 +43,6 @@ class AirlineStatisticsTest {
                 new Airplane(2, 3, 4, 5, "a2", 2),
                 new Airplane(3, 4, 5, 6, "a3", 3)
         };
-        assertArrayEquals(statistics.getAircraftByFuelCnsmptnRange(4, 6).toArray(), controlArray);
+        assertArrayEquals(statistics.getAircraftByFuelConsumptionRange(airline,4, 6).toArray(), controlArray);
     }
 }

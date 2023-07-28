@@ -1,10 +1,16 @@
 package com.academy.burtsevich.task1;
 
+import com.academy.burtsevich.task1.aircrafts.Airplane;
+import com.academy.burtsevich.task1.aircrafts.Helicopter;
+import com.academy.burtsevich.task1.airline.Airline;
+import com.academy.burtsevich.task1.service.AirlineStatistics;
+import com.academy.burtsevich.task1.service.ReportPrinter;
+
 public class Main {
     public static void main(String[] args) {
         Airline airline = new Airline("The Last Way");
-        AirlineStatistics airlineStatistics = new AirlineStatistics(airline);
-        ReportPrinter reportPrinter = new ReportPrinter(airlineStatistics);
+        ReportPrinter reportPrinter = new ReportPrinter();
+
         airline.addAircraft(new Airplane(183, 164000, 3700, 4700, "Airbus A310", 10023));
         airline.addAircraft(new Airplane(149, 73500, 4900, 2500, "Airbus A320", 10024));
         airline.addAircraft(new Airplane(114, 52800, 2518, 2140, "Boeing-737", 10025));
@@ -14,9 +20,9 @@ public class Main {
         airline.addAircraft(new Helicopter(4, 1225, 602, 87, "Robinson R66", 20002));
         airline.addAircraft(new Helicopter(4, 1225, 602, 87, "Robinson R66", 20003));
 
-        reportPrinter.printTotalCapacity();
-        reportPrinter.printTotalLoadCapacity();
-        reportPrinter.printAircraftByCnsmptnRange(314, 2500);
-        reportPrinter.printSortedByRangeOfFlightFleet();
+        reportPrinter.printTotalCapacity(airline);
+        reportPrinter.printTotalLoadCapacity(airline);
+        reportPrinter.printAircraftSortedByConsumptionRange(airline, 314, 2500);
+        reportPrinter.printFleetSortedByRangeOfFlight(airline);
     }
 }

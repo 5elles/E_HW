@@ -1,10 +1,16 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.airline;
+
+import com.academy.burtsevich.task1.aircrafts.Aircraft;
+import com.academy.burtsevich.task1.service.AirlineStatistics;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Airline {
     private String airlinesName;
-    private ArrayList<Aircraft> airFleet = new ArrayList<>();
+    private List<Aircraft> airFleet = new ArrayList<>();
+    AirlineStatistics airlineStatistics = new AirlineStatistics();
+
 
     public Airline(String airlinesName) {
         this.airlinesName = airlinesName;
@@ -23,7 +29,7 @@ public class Airline {
         this.airlinesName = airlinesName;
     }
 
-    public ArrayList<Aircraft> getAirFleet() {
+    public List<Aircraft> getAirFleet() {
         return airFleet;
     }
 
@@ -33,5 +39,13 @@ public class Airline {
 
     public void addAircraft(Aircraft aircraft){
         airFleet.add(aircraft);
+    }
+
+    public AirlineStatistics getAirlineStatistics() {
+        return airlineStatistics;
+    }
+
+    public void setAirlineStatistics(AirlineStatistics airlineStatistics) {
+        this.airlineStatistics = airlineStatistics;
     }
 }

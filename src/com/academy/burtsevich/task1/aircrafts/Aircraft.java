@@ -1,4 +1,4 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.aircrafts;
 
 import java.util.Objects;
 

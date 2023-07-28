@@ -1,5 +1,7 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.aircrafts;
 
+import com.academy.burtsevich.task1.aircrafts.Aircraft;
+import com.academy.burtsevich.task1.aircrafts.Helicopter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

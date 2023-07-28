@@ -1,6 +1,6 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.aircrafts;
 
-public class Airplane extends Aircraft{
+public class Airplane extends Aircraft {
     public Airplane(int capacity, int loadCapacity, int range, int fuelConsumption, String model, int registrationNumber) {
         super(capacity, loadCapacity, range, fuelConsumption, model, registrationNumber);
     }

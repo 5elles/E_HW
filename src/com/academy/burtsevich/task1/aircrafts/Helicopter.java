@@ -1,6 +1,6 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.aircrafts;
 
-public class Helicopter extends Aircraft{
+public class Helicopter extends Aircraft {
     public Helicopter(int capacity,
                       int loadCapacity,
                       int range,

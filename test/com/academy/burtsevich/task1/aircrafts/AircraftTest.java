@@ -1,6 +1,9 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.aircrafts;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.academy.burtsevich.task1.aircrafts.Aircraft;
+import com.academy.burtsevich.task1.aircrafts.Airplane;
 import org.junit.jupiter.api.Test;
 
 public class AircraftTest {

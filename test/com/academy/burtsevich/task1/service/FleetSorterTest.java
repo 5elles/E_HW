@@ -1,5 +1,9 @@
-package com.academy.burtsevich.task1;
+package com.academy.burtsevich.task1.service;
 
+import com.academy.burtsevich.task1.aircrafts.Aircraft;
+import com.academy.burtsevich.task1.aircrafts.Airplane;
+import com.academy.burtsevich.task1.aircrafts.Helicopter;
+import com.academy.burtsevich.task1.service.FleetService;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,7 +12,7 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FleetSorterTest {
-    FleetSorter fleetSorter = new FleetSorter();
+    FleetService fleetSorter = new FleetService();
 
     ArrayList<Aircraft> airFleet = new ArrayList<>(Arrays.asList(
             new Airplane(1, 2, 3, 4, "a1", 1),
