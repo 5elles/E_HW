@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AirlineStatisticsTest {
+class AirlineStatisticsServiceTest {
     Airline airline = new Airline("Test airline");
     ArrayList<Aircraft> airFleet = new ArrayList<>(Arrays.asList(
             new Airplane(1, 2, 3, 4, "a1", 1),
@@ -21,7 +21,7 @@ class AirlineStatisticsTest {
             new Helicopter(5, 6, 7, 8, "h2", 5)
     ));
 
-    AirlineStatistics statistics = new AirlineStatistics();
+    AirlineStatisticsService statistics = new AirlineStatisticsService();
 
     @Test
     void getTotalCapacity() {

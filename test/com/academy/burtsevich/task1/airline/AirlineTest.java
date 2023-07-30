@@ -3,8 +3,6 @@ package com.academy.burtsevich.task1.airline;
 import com.academy.burtsevich.task1.aircrafts.Aircraft;
 import com.academy.burtsevich.task1.aircrafts.Airplane;
 import com.academy.burtsevich.task1.aircrafts.Helicopter;
-import com.academy.burtsevich.task1.airline.Airline;
-import com.academy.burtsevich.task1.service.AirlineStatistics;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

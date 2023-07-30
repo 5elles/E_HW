@@ -1,7 +1,7 @@
 package com.academy.burtsevich.task1.airline;
 
 import com.academy.burtsevich.task1.aircrafts.Aircraft;
-import com.academy.burtsevich.task1.service.AirlineStatistics;
+import com.academy.burtsevich.task1.service.AirlineStatisticsService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 public class Airline {
     private String airlinesName;
     private List<Aircraft> airFleet = new ArrayList<>();
-    AirlineStatistics airlineStatistics = new AirlineStatistics();
+    AirlineStatisticsService airlineStatisticsService = new AirlineStatisticsService();
 
 
     public Airline(String airlinesName) {
@@ -41,11 +41,11 @@ public class Airline {
         airFleet.add(aircraft);
     }
 
-    public AirlineStatistics getAirlineStatistics() {
-        return airlineStatistics;
+    public AirlineStatisticsService getAirlineStatistics() {
+        return airlineStatisticsService;
     }
 
-    public void setAirlineStatistics(AirlineStatistics airlineStatistics) {
-        this.airlineStatistics = airlineStatistics;
+    public void setAirlineStatistics(AirlineStatisticsService airlineStatisticsService) {
+        this.airlineStatisticsService = airlineStatisticsService;
     }
 }

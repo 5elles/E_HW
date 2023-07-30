@@ -5,7 +5,7 @@ import com.academy.burtsevich.task1.airline.Airline;
 
 import java.util.List;
 
-public class ReportPrinter {
+public class ReportPrinterService {
 
 
 
