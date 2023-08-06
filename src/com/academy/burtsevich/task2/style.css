@@ -74,6 +74,11 @@ th, td{
 }
 #Mail__footer{
     font-size: 48px;
+
+}
+#mail{
+    text-decoration: none;
+    color: white;
 }
 #Company__footer{
     font-size: 15px;
